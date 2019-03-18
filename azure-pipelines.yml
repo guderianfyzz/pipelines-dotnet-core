@@ -9,7 +9,10 @@ variables:
 
 steps:
 - script: |
-    dotnet build --configuration $(buildConfiguration)
+    echo $(buildConfiguration)
+    echo AboveIsBuildConfiguration
+    printenv
+#    dotnet build --configuration $(buildConfiguration)
 #    dotnet test dotnetcore-tests --configuration $(buildConfiguration) --logger trx
 #    dotnet publish --configuration $(buildConfiguration) --output $BUILD_ARTIFACTSTAGINGDIRECTORY
 
